@@ -1,62 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Vaidik Dhamecha | Web Developer</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #0f172a;
-      color: white;
-      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
     }
 
     header {
+      background: #0f172a;
+      color: white;
       padding: 60px 20px;
+      text-align: center;
     }
 
-    h1 {
-      font-size: 40px;
+    header h1 {
       margin: 0;
+      font-size: 42px;
     }
 
-    p {
-      color: #cbd5f5;
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #cbd5e1;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
     }
 
     section {
-      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #e2e8f0;
+      display: inline-block;
+      padding-bottom: 5px;
     }
 
     .projects a {
       display: block;
-      margin: 10px;
-      padding: 10px;
-      background: #1e293b;
-      color: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      background: white;
+      border: 1px solid #e2e8f0;
       text-decoration: none;
+      color: #1e293b;
       border-radius: 8px;
       transition: 0.3s;
     }
 
     .projects a:hover {
-      background: #3b82f6;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #3b82f6;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
+      border-color: #38bdf8;
+      transform: translateY(-3px);
     }
 
     footer {
+      text-align: center;
       padding: 20px;
+      color: #64748b;
       font-size: 14px;
-      color: gray;
     }
   </style>
 </head>
@@ -66,30 +89,40 @@
 <header>
   <h1>Vaidik Dhamecha</h1>
   <p>Web Developer | Full Stack Enthusiast</p>
-  <a href="https://github.com/VaidikDhamecha" class="btn">GitHub</a>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section>
-  <h2>About Me</h2>
-  <p>I am a BCA graduate passionate about building modern web applications.</p>
+<section id="about">
+  <h2>About</h2>
+  <p>
+    I am a BCA graduate from Atmiya University with a strong interest in web development.
+    I have experience building web applications using HTML, CSS, JavaScript, PHP, and MySQL.
+    I focus on creating clean, responsive, and user-friendly websites.
+  </p>
 </section>
 
-<section class="projects">
+<section id="projects" class="projects">
   <h2>Projects</h2>
 
   <a href="https://job-portal3.free.nf/" target="_blank">
-    💼 Job Portal Website
+    Job Portal Website – Web application with authentication and database integration
   </a>
 
   <a href="https://nextgenlms.infinityfree.me/" target="_blank">
-    📚 LMS Project
+    Learning Management System – Platform for managing courses and users
   </a>
 
 </section>
 
-<section>
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: yourmail@gmail.com</p>
+  <p>GitHub: https://github.com/VaidikDhamecha</p>
 </section>
 
 <footer>
