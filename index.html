@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vaidik Dhamecha - Software and Web Developer Portfolio">
+    <meta name="description" content="Vaidik Dhamecha - Software Developer Portfolio">
     <title>Vaidik Dhamecha | Portfolio</title>
 
     <style>
@@ -19,14 +19,14 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f8fafc;
-            color: #1e293b;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #333333;
             line-height: 1.7;
         }
 
         a {
-            color: #2563eb;
+            color: #333333;
             text-decoration: none;
         }
 
@@ -36,74 +36,89 @@
 
         .container {
             width: 90%;
-            max-width: 1000px;
+            max-width: 950px;
             margin: auto;
         }
 
+        /* Header */
         header {
+            padding: 65px 0 45px;
             background: #ffffff;
-            padding: 55px 0 40px;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #eeeeee;
         }
 
         header h1 {
             font-size: 38px;
-            color: #0f172a;
+            color: #222222;
             margin-bottom: 5px;
         }
 
         header h2 {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: normal;
-            color: #64748b;
-            margin-bottom: 15px;
+            color: #777777;
+            margin-bottom: 18px;
         }
 
         .intro {
             max-width: 700px;
-            color: #475569;
-            margin-bottom: 22px;
+            color: #555555;
+            margin-bottom: 20px;
         }
 
         .contact-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px 20px;
-            margin-bottom: 22px;
+            gap: 10px 22px;
+            margin-bottom: 25px;
         }
 
+        .contact-links a {
+            color: #555555;
+            border-bottom: 1px solid #bbbbbb;
+        }
+
+        .contact-links a:hover {
+            color: #111111;
+            border-color: #111111;
+        }
+
+        /* Download Button */
         .download-btn {
             display: inline-block;
-            background: #2563eb;
+            padding: 10px 22px;
+            background: #222222;
             color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 4px;
             font-weight: 600;
+            transition: background 0.2s ease;
         }
 
         .download-btn:hover {
-            background: #1d4ed8;
+            background: #444444;
             color: #ffffff;
             text-decoration: none;
         }
 
+        /* Sections */
         section {
             padding: 35px 0;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #eeeeee;
         }
 
         .section-title {
-            font-size: 25px;
-            color: #0f172a;
-            margin-bottom: 18px;
+            font-size: 23px;
+            color: #222222;
+            margin-bottom: 20px;
         }
 
         .about-text {
-            color: #475569;
+            color: #555555;
         }
 
+        /* Education and Experience */
         .item {
-            margin-bottom: 22px;
+            margin-bottom: 23px;
         }
 
         .item:last-child {
@@ -111,47 +126,45 @@
         }
 
         .item h3 {
-            font-size: 18px;
-            color: #1e293b;
+            font-size: 17px;
+            color: #333333;
         }
 
-        .item .subtitle {
-            color: #64748b;
+        .subtitle {
+            color: #888888;
             font-size: 14px;
             margin-bottom: 7px;
         }
 
-        .item p {
-            color: #475569;
-        }
-
         ul {
             padding-left: 22px;
-            color: #475569;
+            color: #555555;
         }
 
         li {
             margin-bottom: 5px;
         }
 
+        /* Skills */
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 9px;
         }
 
         .skill {
-            background: #eaf1ff;
-            color: #1d4ed8;
+            background: #f3f3f3;
+            color: #444444;
             padding: 6px 13px;
-            border-radius: 4px;
+            border-radius: 3px;
             font-size: 14px;
         }
 
+        /* Projects */
         .project {
             background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
+            border: 1px solid #e8e8e8;
+            border-radius: 5px;
             padding: 20px;
             margin-bottom: 16px;
         }
@@ -161,42 +174,62 @@
         }
 
         .project h3 {
-            font-size: 19px;
+            font-size: 18px;
+            color: #222222;
             margin-bottom: 5px;
         }
 
-        .project p {
-            color: #475569;
-            margin: 8px 0;
+        .project-tech {
+            color: #888888;
+            font-size: 14px;
         }
 
-        .project-tech {
-            font-size: 14px;
-            color: #64748b;
+        .project p {
+            color: #555555;
+            margin: 8px 0;
         }
 
         .project-links {
             display: flex;
-            gap: 18px;
             flex-wrap: wrap;
-            margin-top: 10px;
+            gap: 18px;
+            margin-top: 12px;
         }
 
+        .project-links a {
+            color: #333333;
+            font-weight: 600;
+            border-bottom: 1px solid #aaaaaa;
+        }
+
+        .project-links a:hover {
+            border-color: #222222;
+        }
+
+        /* Contact */
         .contact-info p {
             margin-bottom: 8px;
             overflow-wrap: anywhere;
+            color: #555555;
         }
 
+        .contact-info a {
+            color: #333333;
+            border-bottom: 1px solid #aaaaaa;
+        }
+
+        /* Footer */
         footer {
-            text-align: center;
             padding: 25px 0;
-            color: #64748b;
+            text-align: center;
+            color: #888888;
             font-size: 14px;
         }
 
+        /* Mobile */
         @media (max-width: 600px) {
             header {
-                padding: 35px 0;
+                padding: 40px 0 30px;
             }
 
             header h1 {
@@ -212,7 +245,7 @@
             }
 
             .section-title {
-                font-size: 22px;
+                font-size: 21px;
             }
         }
     </style>
@@ -240,7 +273,7 @@
                 <a href="https://github.com/VaidikDhamecha"
                    target="_blank" rel="noopener noreferrer">GitHub</a>
 
-                <a href="https://www.linkedin.com/in/vaidik-dhamecha"
+                <a href="https://www.linkedin.com/in/vaidik-dhamecha-2113b4299/"
                    target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
 
@@ -464,7 +497,7 @@
             </ul>
         </section>
 
-        <!-- Additional Information -->
+        <!-- Languages and Strengths -->
         <section id="additional">
             <h2 class="section-title">Languages & Strengths</h2>
 
@@ -485,6 +518,7 @@
             <h2 class="section-title">Contact</h2>
 
             <div class="contact-info">
+
                 <p>
                     <strong>Email:</strong>
                     <a href="mailto:vaidikdhamecha@gmail.com">
@@ -493,11 +527,13 @@
                 </p>
 
                 <p>
-                    <strong>Phone:</strong> +91 99096 41360
+                    <strong>Phone:</strong>
+                    <a href="tel:+919909641360">+91 99096 41360</a>
                 </p>
 
                 <p>
-                    <strong>Location:</strong> Rajkot, Gujarat, India
+                    <strong>Location:</strong>
+                    Rajkot, Gujarat, India
                 </p>
 
                 <p>
@@ -510,11 +546,12 @@
 
                 <p>
                     <strong>LinkedIn:</strong>
-                    <a href="https://www.linkedin.com/in/vaidik-dhamecha"
+                    <a href="https://www.linkedin.com/in/vaidik-dhamecha-2113b4299/"
                        target="_blank" rel="noopener noreferrer">
                         linkedin.com/in/vaidik-dhamecha
                     </a>
                 </p>
+
             </div>
         </section>
 
