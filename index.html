@@ -36,6 +36,23 @@
       font-size: 18px;
     }
 
+    .btn-download {
+      display: inline-block;
+      margin-top: 20px;
+      background: #3b82f6;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-download:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
     .container {
       max-width: 1000px;
       margin: auto;
@@ -65,6 +82,9 @@
       padding: 20px;
       border-radius: 10px;
       transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .card:hover {
@@ -77,10 +97,26 @@
       color: #ffffff;
     }
 
+    .card p {
+      margin-bottom: 15px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .card-links {
+      display: flex;
+      gap: 15px;
+    }
+
     .card a {
       text-decoration: none;
       color: #3b82f6;
       font-size: 14px;
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
     }
 
     .skills span {
@@ -116,6 +152,8 @@
 <header>
   <h1>Vaidik Dhamecha</h1>
   <p>Web Developer | Full Stack Enthusiast</p>
+  <!-- Replace 'resume.pdf' with your actual uploaded resume file name or path -->
+  <a href="resume.pdf" class="btn-download" download>Download CV</a>
 </header>
 
 <div class="container">
@@ -132,65 +170,91 @@
     <h2>Projects</h2>
     <div class="projects">
 
+      <!-- Job Portal Website -->
       <div class="card">
-        <h3>Job Portal Website</h3>
-        <p>Web application with authentication and job management features.</p>
-        <a href="https://job-portal3.free.nf/" target="_blank">View Project</a>
+        <div>
+          <h3>Job Portal Website</h3>
+          <p>Web application with authentication, dynamic filtering, and job management features.</p>
+        </div>
+        <div class="card-links">
+          <a href="https://job-portal3.free.nf/" target="_blank">Live Demo</a>
+          <a href="https://github.com/VaidikDhamecha/job-portal" target="_blank">GitHub</a>
+        </div>
       </div>
 
+      <!-- Learning Management System -->
       <div class="card">
-        <h3>Learning Management System</h3>
-        <p>Platform for managing courses and user interaction.</p>
-        <a href="https://nextgenlms.infinityfree.me/" target="_blank">View Project</a>
+        <div>
+          <h3>Learning Management System</h3>
+          <p>Platform featuring secure user authentication and course management for online learning[cite: 2].</p>
+        </div>
+        <div class="card-links">
+          <a href="https://nextgenlms.infinityfree.me/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- OES System (Online Examination System) -->
+      <div class="card">
+        <div>
+          <h3>Online Examination System (OES)</h3>
+          <p>Examination portal featuring automated test submission, question banks, and result calculations[cite: 2].</p>
+        </div>
+        <div class="card-links">
+          <a href="https://oes-system.free.nf/" target="_blank">Live Demo</a>
+          <a href="https://github.com/VaidikDhamecha/oes-analyzer" target="_blank">GitHub</a>
+        </div>
       </div>
 
     </div>
   </section>
 
-<section class="skills">
-  <h2>Skills</h2>
+  <section class="skills">
+    <h2>Skills</h2>
 
-  <h3>Frontend</h3>
-  <span>HTML</span>
-  <span>CSS</span>
-  <span>JavaScript</span>
+    <h3>Frontend</h3>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Bootstrap</span>
 
-  <h3>Backend</h3>
-  <span>PHP</span>
-  <span>MySQL</span>
+    <h3>Backend</h3>
+    <span>PHP</span>
+    <span>Java (JSP/Servlet)</span>
+    <span>MySQL</span>
 
-  <h3>Tools & Technologies</h3>
-  <span>Git</span>
-  <span>GitHub</span>
-  <span>VS Code</span>
+    <h3>Tools & Technologies</h3>
+    <span>Git</span>
+    <span>GitHub</span>
+    <span>Maven</span>
+    <span>VS Code</span>
 
-  <h3>Learning</h3>
-  <span>React.js</span>
-  <span>Node.js</span>
-</section>
+    <h3>Learning</h3>
+    <span>React.js</span>
+    <span>Node.js</span>
+  </section>
 
   <section class="contact">
     <h2>Contact</h2>
     <p>
-  Email: 
-  <a href="mailto:vaidikdhamecha@gmail.com">
-    vaidikdhamecha@gmail.com
-  </a>
-</p>
+      Email: 
+      <a href="mailto:vaidikdhamecha@gmail.com">
+        vaidikdhamecha@gmail.com
+      </a>
+    </p>
 
-<p>
-  GitHub: 
-  <a href="https://github.com/VaidikDhamecha" target="_blank">
-    https://github.com/VaidikDhamecha
-  </a>
-</p>
+    <p>
+      GitHub: 
+      <a href="https://github.com/VaidikDhamecha" target="_blank">
+        https://github.com/VaidikDhamecha
+      </a>
+    </p>
 
-<p>
-  LinkedIn: 
-  <a href="https://www.linkedin.com/in/vaidik-dhamecha-2113b4299" target="_blank">
-    https://www.linkedin.com/in/vaidik-dhamecha-2113b4299
-  </a>
-</p>
+    <p>
+      LinkedIn: 
+      <a href="https://www.linkedin.com/in/vaidik-dhamecha-2113b4299" target="_blank">
+        https://www.linkedin.com/in/vaidik-dhamecha-2113b4299
+      </a>
+    </p>
   </section>
 
 </div>
