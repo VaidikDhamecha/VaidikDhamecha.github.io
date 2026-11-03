@@ -9,23 +9,274 @@
 
     <title>Vaidik Dhamecha | Web Developer</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Header */
+
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(
+                135deg,
+                #1e293b,
+                #0f172a
+            );
+        }
+
+        header h1 {
+            font-size: 42px;
+            color: #ffffff;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #94a3b8;
+            font-size: 18px;
+        }
+
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 22px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .download-btn {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .download-btn:hover {
+            background: #2563eb;
+            transform: translateY(-3px);
+        }
+
+        .contact-btn {
+            border: 1px solid #64748b;
+            color: white;
+        }
+
+        .contact-btn:hover {
+            background: #334155;
+        }
+
+        /* Main Container */
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 45px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: white;
+            border-left: 4px solid #3b82f6;
+            padding-left: 10px;
+        }
+
+        /* About */
+
+        .about p {
+            max-width: 750px;
+            color: #cbd5e1;
+        }
+
+        /* Projects */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(280px, 1fr)
+            );
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 22px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #334155;
+        }
+
+        .card h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            margin-bottom: 12px;
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin: 15px 0;
+        }
+
+        .tech span {
+            background: #334155;
+            color: #cbd5e1;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .project-links a {
+            color: #60a5fa;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .project-links a:hover {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+
+        /* Skills */
+
+        .skills-group {
+            margin-bottom: 20px;
+        }
+
+        .skills-group h3 {
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #1e293b;
+            margin: 5px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Contact */
+
+        .contact p {
+            margin: 12px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .contact a {
+            color: #60a5fa;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            color: #64748b;
+            font-size: 14px;
+            border-top: 1px solid #1e293b;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 60px 15px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            .container {
+                padding: 30px 18px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
     <!-- Header -->
+
     <header>
+
         <h1>Vaidik Dhamecha</h1>
 
-        <p>Web Developer | Full Stack Enthusiast</p>
+        <p>
+            Web Developer | Full Stack Enthusiast
+        </p>
 
         <div class="buttons">
 
-            <a
-                href="./Vaidik_Resume.pdf"
-                class="btn download-btn"
-                download="Vaidik_Resume.pdf">
+            <a href="./Vaidik_Resume.pdf"
+               class="btn download-btn"
+               download="Vaidik_Resume.pdf">
                 Download CV ↓
             </a>
 
@@ -34,12 +285,14 @@
             </a>
 
         </div>
+
     </header>
 
 
     <main class="container">
 
         <!-- About Section -->
+
         <section class="about" id="about">
 
             <h2>About Me</h2>
@@ -61,6 +314,7 @@
 
 
         <!-- Projects Section -->
+
         <section id="projects">
 
             <h2>My Projects</h2>
@@ -68,6 +322,7 @@
             <div class="projects">
 
                 <!-- Job Portal -->
+
                 <div class="card">
 
                     <h3>Job Portal Website</h3>
@@ -106,6 +361,7 @@
 
 
                 <!-- Learning Management System -->
+
                 <div class="card">
 
                     <h3>Learning Management System</h3>
@@ -138,6 +394,7 @@
 
 
                 <!-- OES Analyzer -->
+
                 <div class="card">
 
                     <h3>OES System (Online Examination System)</h3>
@@ -181,6 +438,7 @@
 
 
         <!-- Skills Section -->
+
         <section class="skills" id="skills">
 
             <h2>Skills</h2>
@@ -189,14 +447,12 @@
 
                 <h3>Programming Languages</h3>
 
-                <div class="skill-list">
-                    <span>Java</span>
-                    <span>PHP</span>
-                    <span>C</span>
-                    <span>C#</span>
-                    <span>C++</span>
-                    <span>JavaScript</span>
-                </div>
+                <span>Java</span>
+                <span>PHP</span>
+                <span>C</span>
+                <span>C#</span>
+                <span>C++</span>
+                <span>JavaScript</span>
 
             </div>
 
@@ -205,15 +461,13 @@
 
                 <h3>Frontend & Web Technologies</h3>
 
-                <div class="skill-list">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>Bootstrap</span>
-                    <span>ASP.NET</span>
-                    <span>AJAX</span>
-                    <span>JSP/Servlet</span>
-                </div>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+                <span>ASP.NET</span>
+                <span>AJAX</span>
+                <span>JSP/Servlet</span>
 
             </div>
 
@@ -222,12 +476,10 @@
 
                 <h3>Backend & Databases</h3>
 
-                <div class="skill-list">
-                    <span>PHP</span>
-                    <span>MySQL</span>
-                    <span>Oracle Database</span>
-                    <span>PL/SQL</span>
-                </div>
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Oracle Database</span>
+                <span>PL/SQL</span>
 
             </div>
 
@@ -236,12 +488,10 @@
 
                 <h3>Tools & Technologies</h3>
 
-                <div class="skill-list">
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>Maven</span>
-                    <span>VS Code</span>
-                </div>
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>Maven</span>
+                <span>VS Code</span>
 
             </div>
 
@@ -250,12 +500,10 @@
 
                 <h3>Currently Learning</h3>
 
-                <div class="skill-list">
-                    <span>React.js</span>
-                    <span>Node.js</span>
-                    <span>Artificial Intelligence</span>
-                    <span>Machine Learning</span>
-                </div>
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>Artificial Intelligence</span>
+                <span>Machine Learning</span>
 
             </div>
 
@@ -263,6 +511,7 @@
 
 
         <!-- Contact Section -->
+
         <section class="contact" id="contact">
 
             <h2>Contact Me</h2>
@@ -301,6 +550,7 @@
 
 
     <!-- Footer -->
+
     <footer>
         © 2026 Vaidik Dhamecha. All Rights Reserved.
     </footer>
