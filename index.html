@@ -95,9 +95,7 @@
         }
 
         .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+            display: inline-block;
             padding: 12px 24px;
             border-radius: 8px;
             font-weight: 600;
@@ -105,8 +103,8 @@
             cursor: pointer;
         }
 
+        /* Download CV button - no arrow or icon */
         .download-btn {
-            gap: 10px;
             background: linear-gradient(135deg, #3b82f6, #2563eb);
             color: white;
             border: 1px solid #60a5fa;
@@ -117,15 +115,6 @@
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             transform: translateY(-3px);
             box-shadow: 0 8px 22px rgba(59, 130, 246, 0.4);
-        }
-
-        .download-icon {
-            font-size: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .download-btn:hover .download-icon {
-            transform: translateY(3px);
         }
 
         .section-title {
@@ -272,6 +261,7 @@
         </nav>
     </header>
 
+    <!-- Home Section -->
     <section class="hero" id="home">
         <h1>Hi, I'm <span>Vaidik Dhamecha</span></h1>
         <h2>Web Developer</h2>
@@ -285,11 +275,11 @@
         <a href="./Vaidik_Resume.pdf"
            class="btn download-btn"
            download="Vaidik_Resume.pdf">
-            <span>Download CV</span>
-            <span class="download-icon">↓</span>
+            Download CV
         </a>
     </section>
 
+    <!-- About Section -->
     <section class="about" id="about">
         <h2 class="section-title">About Me</h2>
 
@@ -302,6 +292,7 @@
         </p>
     </section>
 
+    <!-- Education Section -->
     <section id="education">
         <h2 class="section-title">Education</h2>
 
@@ -318,6 +309,7 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title">Skills</h2>
 
@@ -334,6 +326,7 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <h2 class="section-title">My Projects</h2>
 
@@ -341,6 +334,7 @@
 
             <div class="project-card">
                 <h3>Job Portal</h3>
+
                 <p>
                     A job portal web application developed using PHP,
                     MySQL and Bootstrap. It helps users explore job
@@ -349,19 +343,22 @@
 
                 <div class="project-links">
                     <a href="https://job-portal3.free.nf/"
-                       target="_blank" rel="noopener noreferrer">
-                        Live Demo →
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Live Demo
                     </a>
 
                     <a href="https://github.com/VaidikDhamecha/job-portal"
-                       target="_blank" rel="noopener noreferrer">
-                        GitHub →
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        GitHub
                     </a>
                 </div>
             </div>
 
             <div class="project-card">
                 <h3>Learning Management System</h3>
+
                 <p>
                     A Learning Management System developed using PHP,
                     MySQL, HTML, CSS and JavaScript.
@@ -369,14 +366,16 @@
 
                 <div class="project-links">
                     <a href="https://nextgenlms.infinityfree.me/"
-                       target="_blank" rel="noopener noreferrer">
-                        Live Demo →
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Live Demo
                     </a>
                 </div>
             </div>
 
             <div class="project-card">
                 <h3>OES Analyzer</h3>
+
                 <p>
                     An Online Examination System developed using Java,
                     JSP, Servlet, MySQL, HTML and CSS.
@@ -384,13 +383,15 @@
 
                 <div class="project-links">
                     <a href="https://oes-system.free.nf/"
-                       target="_blank" rel="noopener noreferrer">
-                        Live Demo →
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Live Demo
                     </a>
 
                     <a href="https://github.com/VaidikDhamecha/oes-analyzer"
-                       target="_blank" rel="noopener noreferrer">
-                        GitHub →
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        GitHub
                     </a>
                 </div>
             </div>
@@ -398,6 +399,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title">Contact Me</h2>
 
@@ -412,7 +414,8 @@
             <p>
                 GitHub:
                 <a href="https://github.com/VaidikDhamecha"
-                   target="_blank" rel="noopener noreferrer">
+                   target="_blank"
+                   rel="noopener noreferrer">
                     github.com/VaidikDhamecha
                 </a>
             </p>
@@ -420,7 +423,8 @@
             <p>
                 LinkedIn:
                 <a href="https://www.linkedin.com/in/vaidik-dhamecha-2113b4299"
-                   target="_blank" rel="noopener noreferrer">
+                   target="_blank"
+                   rel="noopener noreferrer">
                     LinkedIn Profile
                 </a>
             </p>
