@@ -2,495 +2,438 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vaidik Dhamecha - Software Developer Portfolio">
-    <title>Vaidik Dhamecha | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vaidik Dhamecha - MCA Student, Java Developer and Web Developer from Rajkot, Gujarat.">
+  <title>Vaidik Dhamecha | Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    :root {
+      --background: #0b0b0b;
+      --surface: #151515;
+      --surface-light: #1c1c1c;
+      --text: #f5f5f5;
+      --muted: #a1a1a1;
+      --border: #292929;
+      --accent: #ffffff;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #101010;
-            color: #e5e5e5;
-            line-height: 1.7;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-        a {
-            color: #d4d4d4;
-            text-decoration: none;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        a:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
+    .container {
+      width: 90%;
+      max-width: 1050px;
+      margin: auto;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 950px;
-            margin: auto;
-        }
+    header {
+      padding: 75px 0 65px;
+      border-bottom: 1px solid var(--border);
+      background: #101010;
+    }
 
-        header {
-            padding: 65px 0 45px;
-            background: #151515;
-            border-bottom: 1px solid #292929;
-        }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-        header h1 {
-            font-size: 38px;
-            color: #ffffff;
-            margin-bottom: 5px;
-        }
+    .hero-label {
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
 
-        header h2 {
-            font-size: 19px;
-            font-weight: normal;
-            color: #a3a3a3;
-            margin-bottom: 18px;
-        }
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 64px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+      letter-spacing: -2px;
+    }
 
-        .intro {
-            max-width: 700px;
-            color: #c4c4c4;
-            margin-bottom: 20px;
-        }
+    .hero h2 {
+      color: #c5c5c5;
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
 
-        .contact-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px 22px;
-            margin-bottom: 25px;
-        }
+    .hero p {
+      color: var(--muted);
+      max-width: 650px;
+      margin-bottom: 28px;
+    }
 
-        .contact-links a {
-            color: #d4d4d4;
-            border-bottom: 1px solid #666666;
-        }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #111;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: 0.25s ease;
+    }
 
-        .contact-links a:hover {
-            color: #ffffff;
-            border-color: #ffffff;
-        }
+    .btn:hover {
+      background: #d5d5d5;
+      transform: translateY(-2px);
+    }
 
-        .download-btn {
-            display: inline-block;
-            padding: 10px 22px;
-            background: #f5f5f5;
-            color: #111111;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background 0.2s ease;
-        }
+    section {
+      padding: 55px 0;
+      border-bottom: 1px solid var(--border);
+    }
 
-        .download-btn:hover {
-            background: #d4d4d4;
-            color: #111111;
-            text-decoration: none;
-        }
+    .section-title {
+      font-size: 27px;
+      margin-bottom: 28px;
+      letter-spacing: -0.5px;
+    }
 
-        section {
-            padding: 35px 0;
-            border-bottom: 1px solid #292929;
-        }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 3px;
+      background: #eeeeee;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
 
-        .section-title {
-            font-size: 23px;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
+    .about-text {
+      color: var(--muted);
+      max-width: 850px;
+    }
 
-        .about-text {
-            color: #c4c4c4;
-        }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 23px;
+      border-radius: 9px;
+      margin-bottom: 17px;
+      transition: 0.25s ease;
+    }
 
-        .item {
-            margin-bottom: 23px;
-        }
+    .card:hover {
+      background: var(--surface-light);
+      border-color: #484848;
+      transform: translateY(-3px);
+    }
 
-        .item:last-child {
-            margin-bottom: 0;
-        }
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 5px;
+    }
 
-        .item h3 {
-            font-size: 17px;
-            color: #eeeeee;
-        }
+    .card h4 {
+      color: #d0d0d0;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
 
-        .subtitle {
-            color: #999999;
-            font-size: 14px;
-            margin-bottom: 7px;
-        }
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-        ul {
-            padding-left: 22px;
-            color: #c4c4c4;
-        }
+    .date {
+      color: #888;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
 
-        li {
-            margin-bottom: 5px;
-        }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 9px;
-        }
+    .skill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 9px 16px;
+      border-radius: 5px;
+      color: #dedede;
+      font-size: 14px;
+    }
 
-        .skill {
-            background: #222222;
-            color: #dddddd;
-            border: 1px solid #383838;
-            padding: 6px 13px;
-            border-radius: 4px;
-            font-size: 14px;
-        }
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 14px;
+    }
 
-        .project {
-            background: #181818;
-            border: 1px solid #303030;
-            border-radius: 6px;
-            padding: 20px;
-            margin-bottom: 16px;
-        }
+    .project-links a,
+    .contact-links a {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-color: #777;
+      text-underline-offset: 4px;
+      font-size: 14px;
+    }
 
-        .project:last-child {
-            margin-bottom: 0;
-        }
+    .project-links a:hover,
+    .contact-links a:hover {
+      color: #aaa;
+    }
 
-        .project h3 {
-            font-size: 18px;
-            color: #ffffff;
-            margin-bottom: 5px;
-        }
+    .contact-info p {
+      color: var(--muted);
+      margin-bottom: 10px;
+      overflow-wrap: anywhere;
+    }
 
-        .project-tech {
-            color: #999999;
-            font-size: 14px;
-        }
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-        .project p {
-            color: #c4c4c4;
-            margin: 8px 0;
-        }
+    footer {
+      padding: 25px 0;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
 
-        .project-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            margin-top: 12px;
-        }
+    @media (max-width: 600px) {
+      header {
+        padding: 55px 0 45px;
+      }
 
-        .project-links a {
-            color: #eeeeee;
-            font-weight: 600;
-            border-bottom: 1px solid #777777;
-        }
+      section {
+        padding: 42px 0;
+      }
 
-        .project-links a:hover {
-            border-color: #ffffff;
-        }
+      .container {
+        width: 88%;
+      }
 
-        .contact-info p {
-            margin-bottom: 8px;
-            overflow-wrap: anywhere;
-            color: #c4c4c4;
-        }
+      .hero h1 {
+        letter-spacing: -1px;
+      }
 
-        .contact-info a {
-            color: #eeeeee;
-            border-bottom: 1px solid #777777;
-        }
-
-        footer {
-            padding: 25px 0;
-            text-align: center;
-            color: #888888;
-            font-size: 14px;
-        }
-
-        @media (max-width: 600px) {
-            header {
-                padding: 40px 0 30px;
-            }
-
-            header h1 {
-                font-size: 30px;
-            }
-
-            .container {
-                width: 88%;
-            }
-
-            section {
-                padding: 28px 0;
-            }
-
-            .section-title {
-                font-size: 21px;
-            }
-        }
-    </style>
+      .card {
+        padding: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Vaidik Dhamecha</h1>
-            <h2>Software Developer | Web Developer</h2>
+  <!-- Hero Section -->
+  <header>
+    <div class="container hero">
+      <div class="hero-label">Welcome to my portfolio</div>
 
-            <p class="intro">
-                I am a motivated fresher interested in Software Development,
-                Full-Stack Web Development, and Artificial Intelligence and
-                Machine Learning. I enjoy learning new technologies and
-                building practical applications.
-            </p>
+      <h1>Vaidik Dhamecha</h1>
 
-            <div class="contact-links">
-                <a href="mailto:vaidikdhamecha@gmail.com">Email</a>
+      <h2>MCA Student | Java Developer | Web Developer</h2>
 
-                <a href="https://github.com/VaidikDhamecha"
-                   target="_blank" rel="noopener noreferrer">GitHub</a>
+      <p>
+        I am a passionate computer applications student interested in
+        software development, Java programming and web technologies.
+        I enjoy learning new technologies and building practical projects.
+      </p>
 
-                <a href="https://www.linkedin.com/in/vaidik-dhamecha"
-                   target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
+      <a href="./Vaidik_Resume.pdf" class="btn" download>
+        Download CV
+      </a>
+    </div>
+  </header>
 
-            <a href="./Vaidik_Resume.pdf"
-               class="download-btn"
-               download="Vaidik_Resume.pdf">
-                Download CV
-            </a>
+  <main class="container">
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+
+      <p class="about-text">
+        Hello! I am Vaidik Dhamecha from Rajkot, Gujarat, India.
+        I completed my Bachelor of Computer Applications (BCA) at
+        Atmiya University and am pursuing my Master of Computer
+        Applications (MCA) at CHARUSAT.
+
+        I have an interest in Java development, web development,
+        database management and software engineering. I like exploring
+        new technologies and applying my knowledge through projects.
+      </p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+
+      <div class="card">
+        <h3>Master of Computer Applications (MCA)</h3>
+        <h4>CHARUSAT</h4>
+        <div class="date">2026 – 2028</div>
+      </div>
+
+      <div class="card">
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <h4>Atmiya University</h4>
+        <div class="date">2023 – 2026</div>
+      </div>
+
+      <div class="card">
+        <h3>Higher Secondary & Secondary Education</h3>
+        <h4>Shri Mahatma Gandhi Educational Campus</h4>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2 class="section-title">Technical Skills</h2>
+
+      <div class="skills">
+        <span class="skill">Java</span>
+        <span class="skill">PHP</span>
+        <span class="skill">C</span>
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">JSP</span>
+        <span class="skill">Servlets</span>
+        <span class="skill">Bootstrap</span>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2 class="section-title">Internship Experience</h2>
+
+      <div class="card">
+        <h3>Java Software Intern</h3>
+        <h4>Aegis Softech, Rajkot</h4>
+        <div class="date">May 2025</div>
+        <p>
+          Gained practical exposure to Java software development
+          and professional development workflows.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Social Immersion Intern</h3>
+        <h4>CSCI Department, Atmiya University</h4>
+        <div class="date">2024</div>
+        <p>
+          Participated in a social immersion internship as part
+          of university activities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title">My Projects</h2>
+
+      <div class="card">
+        <h3>NexGen LMS</h3>
+        <p>
+          A Learning Management System developed using PHP, MySQL,
+          HTML5, CSS3 and JavaScript.
+        </p>
+        <div class="project-links">
+          <a href="https://nextgenlms.infinityfree.me/"
+             target="_blank" rel="noopener noreferrer">
+            Live Project
+          </a>
         </div>
-    </header>
+      </div>
 
-    <main class="container">
-
-        <section id="about">
-            <h2 class="section-title">About Me</h2>
-
-            <p class="about-text">
-                I completed my Bachelor of Computer Applications (BCA)
-                at Atmiya University and am currently pursuing my Master
-                of Computer Applications (MCA) at CHARUSAT. I am eager
-                to apply my technical foundation to real-world projects,
-                adapt to new technologies, and continuously grow through
-                hands-on development.
-            </p>
-        </section>
-
-        <section id="education">
-            <h2 class="section-title">Education</h2>
-
-            <div class="item">
-                <h3>Master of Computer Applications (MCA)</h3>
-                <p class="subtitle">CHARUSAT, Anand, Gujarat | 2026 – 2028</p>
-            </div>
-
-            <div class="item">
-                <h3>Bachelor of Computer Applications (BCA)</h3>
-                <p class="subtitle">Atmiya University, Rajkot, Gujarat | 2023 – 2026</p>
-            </div>
-
-            <div class="item">
-                <h3>Higher Secondary Certificate (HSC)</h3>
-                <p class="subtitle">Shri Mahatma Gandhi Educational Campus | 2021 – 2022</p>
-            </div>
-
-            <div class="item">
-                <h3>Secondary School Certificate (SSC)</h3>
-                <p class="subtitle">Shri Mahatma Gandhi Educational Campus | 2020 – 2021</p>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2 class="section-title">Technical Skills</h2>
-
-            <div class="skills">
-                <span class="skill">Java</span>
-                <span class="skill">PHP</span>
-                <span class="skill">C</span>
-                <span class="skill">C#</span>
-                <span class="skill">C++</span>
-                <span class="skill">JavaScript</span>
-                <span class="skill">HTML5</span>
-                <span class="skill">CSS3</span>
-                <span class="skill">ASP.NET</span>
-                <span class="skill">AJAX</span>
-                <span class="skill">Bootstrap</span>
-                <span class="skill">MySQL</span>
-                <span class="skill">PL/SQL</span>
-                <span class="skill">Oracle Database</span>
-                <span class="skill">Maven</span>
-                <span class="skill">Git</span>
-                <span class="skill">GitHub</span>
-                <span class="skill">Adobe Photoshop</span>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2 class="section-title">Internship Experience</h2>
-
-            <div class="item">
-                <h3>Java Software Intern</h3>
-                <p class="subtitle">Aegis Softech, Rajkot, Gujarat | May 2025</p>
-
-                <ul>
-                    <li>Developed a To-Do List Application using Core Java and Maven.</li>
-                    <li>Implemented task creation, status updates, tracking and object data persistence.</li>
-                    <li>Gained experience in software development lifecycles and clean coding principles.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <h3>Social Immersion Intern</h3>
-                <p class="subtitle">CSCI Department, Atmiya University | 2024</p>
-
-                <ul>
-                    <li>Managed student dataset records using MS Excel and organized department documentation.</li>
-                    <li>Supported student club activities and campus events.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">Projects</h2>
-
-            <div class="project">
-                <h3>NexGen LMS (Learning Management System)</h3>
-                <p class="project-tech">PHP | MySQL | HTML5 | CSS3 | JavaScript</p>
-
-                <p>
-                    Built a full-stack web application for online learning,
-                    course management and student tracking. Designed
-                    authentication and role-based access for students
-                    and administrators.
-                </p>
-
-                <div class="project-links">
-                    <a href="https://nextgenlms.infinityfree.me/"
-                       target="_blank" rel="noopener noreferrer">Live Demo</a>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>Job Portal Application</h3>
-                <p class="project-tech">PHP | MySQL | Bootstrap</p>
-
-                <p>
-                    Developed a recruitment portal enabling job seekers
-                    to search and apply for jobs. Implemented dynamic
-                    filtering by job title, skills and categories.
-                </p>
-
-                <div class="project-links">
-                    <a href="https://job-portal3.free.nf/"
-                       target="_blank" rel="noopener noreferrer">Live Demo</a>
-
-                    <a href="https://github.com/VaidikDhamecha/job-portal"
-                       target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>OES System (Online Examination System)</h3>
-                <p class="project-tech">Java | JSP/Servlet | MySQL | HTML | CSS</p>
-
-                <p>
-                    Developed an online examination portal featuring
-                    automated test submission and result calculation.
-                    Structured database tables for question banks,
-                    user attempts and test scores.
-                </p>
-
-                <div class="project-links">
-                    <a href="https://oes-system.free.nf/"
-                       target="_blank" rel="noopener noreferrer">Live Demo</a>
-
-                    <a href="https://github.com/VaidikDhamecha/oes-analyzer"
-                       target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="certifications">
-            <h2 class="section-title">Certifications & Achievements</h2>
-
-            <ul>
-                <li>CodeArena 2.0 Certified – Darshan University</li>
-                <li>Codecarnival Certified – Atmiya University</li>
-                <li>Photoshop Course Certified – STP Computer Education Online</li>
-                <li>CCC Course Certified – Shri Academy, Rajkot</li>
-            </ul>
-        </section>
-
-        <section id="additional">
-            <h2 class="section-title">Languages & Strengths</h2>
-
-            <p><strong>Languages:</strong> English, Gujarati (Native), Hindi</p>
-
-            <p>
-                <strong>Core Strengths:</strong>
-                Problem Solving, Analytical Thinking, Collaboration,
-                Rapid Tech Adaptability
-            </p>
-        </section>
-
-        <section id="contact">
-            <h2 class="section-title">Contact</h2>
-
-            <div class="contact-info">
-                <p>
-                    <strong>Email:</strong>
-                    <a href="mailto:vaidikdhamecha@gmail.com">
-                        vaidikdhamecha@gmail.com
-                    </a>
-                </p>
-
-                <p>
-                    <strong>Phone:</strong>
-                    <a href="tel:+919909641360">+91 99096 41360</a>
-                </p>
-
-                <p><strong>Location:</strong> Rajkot, Gujarat, India</p>
-
-                <p>
-                    <strong>GitHub:</strong>
-                    <a href="https://github.com/VaidikDhamecha"
-                       target="_blank" rel="noopener noreferrer">
-                        github.com/VaidikDhamecha
-                    </a>
-                </p>
-
-                <p>
-                    <strong>LinkedIn:</strong>
-                    <a href="https://www.linkedin.com/in/vaidik-dhamecha"
-                       target="_blank" rel="noopener noreferrer">
-                        linkedin.com/in/vaidik-dhamecha
-                    </a>
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2026 Vaidik Dhamecha. All Rights Reserved.</p>
+      <div class="card">
+        <h3>Job Portal</h3>
+        <p>
+          A web-based job portal developed using PHP, MySQL
+          and Bootstrap.
+        </p>
+        <div class="project-links">
+          <a href="https://job-portal3.free.nf/"
+             target="_blank" rel="noopener noreferrer">
+            Live Project
+          </a>
+          <a href="https://github.com/VaidikDhamecha/job-portal"
+             target="_blank" rel="noopener noreferrer">
+            GitHub Repository
+          </a>
         </div>
-    </footer>
+      </div>
+
+      <div class="card">
+        <h3>Online Examination System (OES)</h3>
+        <p>
+          An online examination system developed using Java,
+          JSP, Servlets, MySQL, HTML and CSS.
+        </p>
+        <div class="project-links">
+          <a href="https://oes-system.free.nf/"
+             target="_blank" rel="noopener noreferrer">
+            Live Project
+          </a>
+          <a href="https://github.com/VaidikDhamecha/oes-analyzer"
+             target="_blank" rel="noopener noreferrer">
+            GitHub Repository
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title">Contact Me</h2>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> vaidikdhamecha@gmail.com</p>
+        <p><strong>Phone:</strong> +91 99096 41360</p>
+        <p><strong>Location:</strong> Rajkot, Gujarat, India</p>
+
+        <div class="contact-links">
+          <a href="https://github.com/VaidikDhamecha"
+             target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+
+          <a href="https://www.linkedin.com/in/vaidik-dhamecha-2113b4299"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+
+          <a href="mailto:vaidikdhamecha@gmail.com">
+            Email Me
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Vaidik Dhamecha. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
