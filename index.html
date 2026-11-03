@@ -4,186 +4,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Vaidik Dhamecha - Web Developer Portfolio">
-
-    <title>Vaidik Dhamecha | Web Developer</title>
+    <title>Vaidik Dhamecha | Portfolio</title>
 
     <style>
-        /* Global Styles */
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        html {
             scroll-behavior: smooth;
         }
 
         body {
+            font-family: Arial, sans-serif;
             background: #0f172a;
             color: #e2e8f0;
             line-height: 1.6;
         }
 
         a {
+            color: inherit;
             text-decoration: none;
         }
 
-        /* Header */
-
         header {
-            padding: 80px 20px;
-            text-align: center;
-            background: linear-gradient(
-                135deg,
-                #1e293b,
-                #0f172a
-            );
-        }
-
-        header h1 {
-            font-size: 42px;
-            color: #ffffff;
-        }
-
-        header p {
-            margin-top: 10px;
-            color: #94a3b8;
-            font-size: 18px;
-        }
-
-        /* Buttons */
-
-        .buttons {
-            margin-top: 25px;
+            background: #111c32;
+            padding: 18px 8%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
             gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #60a5fa;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
             flex-wrap: wrap;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 11px 22px;
-            border-radius: 6px;
-            font-weight: 600;
+        nav a {
+            color: #cbd5e1;
             transition: 0.3s;
         }
 
-        .download-btn {
-            background: #3b82f6;
-            color: white;
-        }
-
-        .download-btn:hover {
-            background: #2563eb;
-            transform: translateY(-3px);
-        }
-
-        .contact-btn {
-            border: 1px solid #64748b;
-            color: white;
-        }
-
-        .contact-btn:hover {
-            background: #334155;
-        }
-
-        /* Main Container */
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 20px;
+        nav a:hover {
+            color: #60a5fa;
         }
 
         section {
-            margin-bottom: 45px;
+            padding: 75px 8%;
         }
 
-        h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: white;
-            border-left: 4px solid #3b82f6;
-            padding-left: 10px;
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
         }
 
-        /* About */
-
-        .about p {
-            max-width: 750px;
-            color: #cbd5e1;
-        }
-
-        /* Projects */
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(
-                auto-fit,
-                minmax(280px, 1fr)
-            );
-            gap: 20px;
-        }
-
-        .card {
-            background: #1e293b;
-            padding: 22px;
-            border-radius: 10px;
-            border: 1px solid #334155;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            background: #334155;
-        }
-
-        .card h3 {
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #cbd5e1;
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 58px);
             margin-bottom: 12px;
         }
 
-        /* Technology Tags */
-
-        .tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 7px;
-            margin: 15px 0;
+        .hero h1 span {
+            color: #60a5fa;
         }
 
-        .tech span {
-            background: #334155;
+        .hero h2 {
+            color: #94a3b8;
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 650px;
             color: #cbd5e1;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 13px;
+            margin-bottom: 25px;
         }
 
-        /* Project Links */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .download-btn {
+            gap: 10px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border: 1px solid #60a5fa;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(59, 130, 246, 0.4);
+        }
+
+        .download-icon {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .download-btn:hover .download-icon {
+            transform: translateY(3px);
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: #60a5fa;
+            margin-bottom: 25px;
+        }
+
+        .about p {
+            max-width: 850px;
+            color: #cbd5e1;
+        }
+
+        .education-card,
+        .project-card,
+        .contact-card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .education-card {
+            margin-bottom: 18px;
+        }
+
+        .education-card h3,
+        .project-card h3 {
+            color: #f1f5f9;
+            margin-bottom: 8px;
+        }
+
+        .education-card p,
+        .project-card p {
+            color: #cbd5e1;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #60a5fa;
+        }
+
+        .project-card p {
+            margin-bottom: 18px;
+        }
 
         .project-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 12px;
+            margin-top: auto;
         }
 
         .project-links a {
             color: #60a5fa;
-            font-size: 14px;
-            font-weight: 600;
+            font-weight: bold;
         }
 
         .project-links a:hover {
@@ -191,362 +201,209 @@
             text-decoration: underline;
         }
 
-        /* Skills */
-
-        .skills-group {
-            margin-bottom: 20px;
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
-        .skills-group h3 {
-            margin-bottom: 10px;
-            color: #cbd5e1;
-        }
-
-        .skills span {
-            display: inline-block;
+        .skill {
             background: #1e293b;
-            margin: 5px;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 14px;
+            color: #93c5fd;
+            border: 1px solid #334155;
+            padding: 9px 16px;
+            border-radius: 7px;
         }
 
-        /* Contact */
-
-        .contact p {
-            margin: 12px 0;
+        .contact-card p {
+            margin-bottom: 12px;
+            color: #cbd5e1;
             overflow-wrap: anywhere;
         }
 
-        .contact a {
+        .contact-card a {
             color: #60a5fa;
         }
 
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-
         footer {
+            background: #111c32;
             text-align: center;
             padding: 22px;
-            color: #64748b;
-            font-size: 14px;
-            border-top: 1px solid #1e293b;
+            color: #94a3b8;
         }
-
-        /* Responsive Design */
 
         @media (max-width: 600px) {
-
             header {
-                padding: 60px 15px;
+                justify-content: center;
             }
 
-            header h1 {
-                font-size: 30px;
+            nav {
+                justify-content: center;
+                gap: 14px;
             }
 
-            header p {
-                font-size: 16px;
+            section {
+                padding: 55px 6%;
             }
 
-            h2 {
-                font-size: 25px;
+            .hero {
+                min-height: 65vh;
             }
 
-            .container {
-                padding: 30px 18px;
-            }
-
-            .projects {
-                grid-template-columns: 1fr;
-            }
-
-            .buttons {
-                gap: 10px;
+            .section-title {
+                font-size: 27px;
             }
         }
-
     </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-
     <header>
+        <div class="logo">Vaidik.</div>
 
-        <h1>Vaidik Dhamecha</h1>
-
-        <p>
-            Web Developer | Full Stack Enthusiast
-        </p>
-
-        <div class="buttons">
-
-            <!-- Download CV -->
-
-            <a
-                href="./Vaidik_Resume.pdf"
-                class="btn download-btn"
-                download="Vaidik_Resume.pdf"
-            >
-                Download CV 
-            </a>
-
-            <!-- Contact Button -->
-
-            <a href="#contact" class="btn contact-btn">
-                Contact Me
-            </a>
-
-        </div>
-
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
+    <section class="hero" id="home">
+        <h1>Hi, I'm <span>Vaidik Dhamecha</span></h1>
+        <h2>Web Developer</h2>
 
-    <main class="container">
+        <p>
+            I am a passionate developer interested in building web applications
+            and learning new technologies. I enjoy creating useful and
+            user-friendly digital experiences.
+        </p>
 
-        <!-- About Section -->
+        <a href="./Vaidik_Resume.pdf"
+           class="btn download-btn"
+           download="Vaidik_Resume.pdf">
+            <span>Download CV</span>
+            <span class="download-icon">↓</span>
+        </a>
+    </section>
 
-        <section class="about" id="about">
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
 
-            <h2>About Me</h2>
+        <p>
+            My name is Vaidik Dhamecha. I am from Rajkot, Gujarat, India.
+            I am interested in web development and software development.
+            I enjoy working with technologies such as PHP, Java, MySQL,
+            HTML, CSS, JavaScript and Bootstrap. I am always eager to
+            improve my technical skills and work on new projects.
+        </p>
+    </section>
 
-            <p>
-                I completed my Bachelor of Computer Applications
-                (BCA) at Atmiya University and am currently pursuing
-                my Master of Computer Applications (MCA) at CHARUSAT.
+    <section id="education">
+        <h2 class="section-title">Education</h2>
 
-                I am a motivated fresher with a strong interest in
-                Software Development, Full-Stack Web Development,
-                and Artificial Intelligence and Machine Learning.
+        <div class="education-card">
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p>CHARUSAT</p>
+            <p>2026 – 2028</p>
+        </div>
 
-                I enjoy building responsive and user-friendly
-                applications using modern web technologies.
-            </p>
+        <div class="education-card">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>Atmiya University</p>
+            <p>2023 – 2026</p>
+        </div>
+    </section>
 
-        </section>
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
 
+        <div class="skills-list">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">PHP</span>
+            <span class="skill">Java</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">Bootstrap</span>
+            <span class="skill">JSP</span>
+            <span class="skill">Servlet</span>
+        </div>
+    </section>
 
-        <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
 
-        <section id="projects">
+        <div class="project-grid">
 
-            <h2>My Projects</h2>
+            <div class="project-card">
+                <h3>Job Portal</h3>
+                <p>
+                    A job portal web application developed using PHP,
+                    MySQL and Bootstrap. It helps users explore job
+                    opportunities through a web-based platform.
+                </p>
 
-            <div class="projects">
+                <div class="project-links">
+                    <a href="https://job-portal3.free.nf/"
+                       target="_blank" rel="noopener noreferrer">
+                        Live Demo →
+                    </a>
 
-                <!-- Job Portal -->
-
-                <div class="card">
-
-                    <h3>Job Portal Website</h3>
-
-                    <p>
-                        Developed a recruitment portal that allows
-                        job seekers to search and apply for jobs.
-                        Includes dynamic job filtering and
-                        job management features.
-                    </p>
-
-                    <div class="tech">
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                        <span>Bootstrap</span>
-                        <span>Web Hosting</span>
-                    </div>
-
-                    <div class="project-links">
-
-                        <a
-                            href="https://job-portal3.free.nf/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Live Demo ↗
-                        </a>
-
-                        <a
-                            href="https://github.com/VaidikDhamecha/job-portal"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub ↗
-                        </a>
-
-                    </div>
-
+                    <a href="https://github.com/VaidikDhamecha/job-portal"
+                       target="_blank" rel="noopener noreferrer">
+                        GitHub →
+                    </a>
                 </div>
+            </div>
 
+            <div class="project-card">
+                <h3>Learning Management System</h3>
+                <p>
+                    A Learning Management System developed using PHP,
+                    MySQL, HTML, CSS and JavaScript.
+                </p>
 
-                <!-- Learning Management System -->
-
-                <div class="card">
-
-                    <h3>Learning Management System</h3>
-
-                    <p>
-                        Developed an online learning platform
-                        for course management, student tracking,
-                        authentication and user interaction.
-                    </p>
-
-                    <div class="tech">
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <div class="project-links">
-
-                        <a
-                            href="https://nextgenlms.infinityfree.me/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Live Demo ↗
-                        </a>
-
-                    </div>
-
+                <div class="project-links">
+                    <a href="https://nextgenlms.infinityfree.me/"
+                       target="_blank" rel="noopener noreferrer">
+                        Live Demo →
+                    </a>
                 </div>
+            </div>
 
+            <div class="project-card">
+                <h3>OES Analyzer</h3>
+                <p>
+                    An Online Examination System developed using Java,
+                    JSP, Servlet, MySQL, HTML and CSS.
+                </p>
 
-                <!-- OES Analyzer -->
+                <div class="project-links">
+                    <a href="https://oes-system.free.nf/"
+                       target="_blank" rel="noopener noreferrer">
+                        Live Demo →
+                    </a>
 
-                <div class="card">
-
-                    <h3>OES System (Online Examination System)</h3>
-
-                    <p>
-                        Developed an online examination portal
-                        featuring automated test submission,
-                        result calculation and question-bank
-                        management.
-                    </p>
-
-                    <div class="tech">
-                        <span>Java</span>
-                        <span>JSP/Servlet</span>
-                        <span>MySQL</span>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                    </div>
-
-                    <div class="project-links">
-
-                        <a
-                            href="https://oes-system.free.nf/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Live Demo ↗
-                        </a>
-
-                        <a
-                            href="https://github.com/VaidikDhamecha/oes-analyzer"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub Repository ↗
-                        </a>
-
-                    </div>
-
+                    <a href="https://github.com/VaidikDhamecha/oes-analyzer"
+                       target="_blank" rel="noopener noreferrer">
+                        GitHub →
+                    </a>
                 </div>
-
             </div>
 
-        </section>
+        </div>
+    </section>
 
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
 
-        <!-- Skills Section -->
-
-        <section class="skills" id="skills">
-
-            <h2>Skills</h2>
-
-            <div class="skills-group">
-
-                <h3>Programming Languages</h3>
-
-                <span>Java</span>
-                <span>PHP</span>
-                <span>C</span>
-                <span>C#</span>
-                <span>C++</span>
-                <span>JavaScript</span>
-
-            </div>
-
-
-            <div class="skills-group">
-
-                <h3>Frontend & Web Technologies</h3>
-
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>Bootstrap</span>
-                <span>ASP.NET</span>
-                <span>AJAX</span>
-                <span>JSP/Servlet</span>
-
-            </div>
-
-
-            <div class="skills-group">
-
-                <h3>Backend & Databases</h3>
-
-                <span>PHP</span>
-                <span>MySQL</span>
-                <span>Oracle Database</span>
-                <span>PL/SQL</span>
-
-            </div>
-
-
-            <div class="skills-group">
-
-                <h3>Tools & Technologies</h3>
-
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Maven</span>
-                <span>VS Code</span>
-
-            </div>
-
-
-            <div class="skills-group">
-
-                <h3>Currently Learning</h3>
-
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Artificial Intelligence</span>
-                <span>Machine Learning</span>
-
-            </div>
-
-        </section>
-
-
-        <!-- Contact Section -->
-
-        <section class="contact" id="contact">
-
-            <h2>Contact Me</h2>
-
+        <div class="contact-card">
             <p>
                 Email:
-
                 <a href="mailto:vaidikdhamecha@gmail.com">
                     vaidikdhamecha@gmail.com
                 </a>
@@ -554,39 +411,26 @@
 
             <p>
                 GitHub:
-
-                <a
-                    href="https://github.com/VaidikDhamecha"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://github.com/VaidikDhamecha"
+                   target="_blank" rel="noopener noreferrer">
                     github.com/VaidikDhamecha
                 </a>
             </p>
 
             <p>
                 LinkedIn:
-
-                <a
-                    href="https://www.linkedin.com/in/vaidik-dhamecha-2113b4299"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://www.linkedin.com/in/vaidik-dhamecha-2113b4299"
+                   target="_blank" rel="noopener noreferrer">
                     LinkedIn Profile
                 </a>
             </p>
 
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
+            <p>Location: Rajkot, Gujarat, India</p>
+        </div>
+    </section>
 
     <footer>
-
-        © 2026 Vaidik Dhamecha. All Rights Reserved.
-
+        <p>© 2026 Vaidik Dhamecha. All Rights Reserved.</p>
     </footer>
 
 </body>
